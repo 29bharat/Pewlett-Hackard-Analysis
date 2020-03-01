@@ -31,7 +31,7 @@ Data:
 ### Who’s Ready for a Mentor?
 Tables used: Titles table was first updated to remove duplicates so that we have the list of employees with thier latest titles. This data is stored in latest_titles.csv
   
-Employees table is then joined on emp_no to latest_titles table to get the employee info i.e. emp_no, first_name, last_name, title, from_date and to_date. Since we are looking for mentors born in 1965, hence filter was used on employees birth_date for January 1, 1965 to December 31, 1965. Also, to ensure that the employees are currently employed, we sue a filter on the to_date of the dept_emp table to be ('9999-01-01'). We join to this table on emp_no to get the final mentor_list.csv in Data folder.
+Employees table is then joined on emp_no to latest_titles table to get the employee info i.e. emp_no, first_name, last_name, title, from_date and to_date. Since we are looking for mentors born in 1965, hence filter was used on employees birth_date for January 1, 1965 to December 31, 1965. Also, to ensure that the employees are currently employed, we sue a filter on the to_date of the dept_emp table to be ('9999-01-01'). We join to this table on emp_no to get the final mentor_list.csv in Data folder. We derive the number of mentors to be 1549.
   
 Data:
   
