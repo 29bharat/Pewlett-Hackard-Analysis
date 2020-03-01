@@ -1,3 +1,7 @@
+select emp_no, count(salary)
+from salaries group by emp_no
+having count(salary) > 1
+
 --Challenge 7 Part 1 - Number of [titles] Retiring
 SELECT ri.emp_no,
 ri.first_name,
@@ -33,6 +37,8 @@ from number_retirement_latest_titles
 group by from_date, title
 order by from_date desc
 
+select * from count_employee_titles
+
 --titles table with just teh latest titles
 select emp_no, title, from_date, to_date
 into latest_titles
@@ -62,3 +68,5 @@ ON emp.emp_no = de.emp_no
 WHERE 
 emp.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
 and de.to_date = ('9999-01-01') ;
+
+select * from mentor_list;
