@@ -11,8 +11,8 @@ From the given data files, we would also like to find out which currrent employe
   
 ### Number of Titles Retiring
   
-Tables joined: Employees table is the driving table since we are looking for employees who are retiring with their titles and salaries. We get Emp_no, first_name and last_name from employees and join to titles to get their respective titles along with from_date by joining on emp_no from both tables. Further, to get the salary of each employee, we join the result to salaries table again on emp_no. Also, additional check was done to make sure that salaries table has unique emp_no i.e. no more than one salary exists for each employee.
-Data: This data is stored in number_retirement_titles.csv in Data folder. Total rows: 65428
+Tables joined: retirement_info table is the driving table since we are looking for employees who are retiring with their titles and salaries. We get Emp_no, first_name and last_name from employees and join to titles to get their respective titles along with from_date by joining on emp_no from both tables. Further, to get the salary of each employee, we join the result to salaries table again on emp_no. Also, additional check was done to make sure that salaries table has unique emp_no i.e. no more than one salary exists for each employee.
+Data: This data is stored in number_retirement_titles.csv in Data folder. Total rows: 65427
   
 ![alt text](https://github.com/29bharat/Pewlett_Hackard_Analysis/blob/master/Data/number_retirement_titles.PNG)
 
@@ -20,7 +20,7 @@ From the data we see that there are few employees who were holding more than one
   
 ### Only the Most Recent Titles
 Tables used: number_retirement_titles - derived from the above
-To get the most recent titles of the employees who are retiring, we're using the feature of partitioning. What it does is - it ranks the rows for titles grouped by the emp_no, first_name, last_name by dec order of from_date. The most latest title will be ranked 1 followed by rank 2 to the previous titles and 3 to the second previous title and so on. What we have done is filtered this data to exclude everything but rank = 1 so that we get the latest titles of these employees. This data is store in number_retirement_latest_titles.csv in Data folder: Total rows: 41381. We see that after removinig duplicates the rows count has dropped by about 24k.
+To get the most recent titles of the employees who are retiring, we're using the feature of partitioning. What it does is - it ranks the rows for titles grouped by the emp_no, first_name, last_name by dec order of from_date. The most latest title will be ranked 1 followed by rank 2 to the previous titles and 3 to the second previous title and so on. What we have done is filtered this data to exclude everything but rank = 1 so that we get the latest titles of these employees. This data is store in number_retirement_latest_titles.csv in Data folder: Total rows: 41380. We see that after removinig duplicates the rows count has dropped by about 24k.
   
 To get the counts of each title by date desc, we have grouped by from_date and title to do a count of emp_no. This gives us the count of employees retiring under each titles by date. This data is stored in count_employee_titles.csv in Data folder
   
@@ -36,3 +36,9 @@ Employees table is then joined on emp_no to latest_titles table to get the emplo
 Data:
   
 ![alt text](https://github.com/29bharat/Pewlett_Hackard_Analysis/blob/master/Data/Mentor_List.PNG)
+
+
+Final Analysis:
+number of individuals retiring: 41380
+number of individuals being hired:
+number of individuals available for mentorship role: 1549
