@@ -39,6 +39,9 @@ Data:
 
 
 Final Analysis:
-number of individuals retiring: 41380
-number of individuals being hired:
-number of individuals available for mentorship role: 1549
+  
+Number of individuals retiring: 41380
+  
+Number of individuals being hired:
+  
+Number of individuals available for mentorship role: 1549
