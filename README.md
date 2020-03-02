@@ -42,6 +42,8 @@ Final Analysis:
   
 Number of individuals retiring: 41380
   
-Number of individuals being hired:
+Number of individuals being hired: Assuming that the company is replacing all the retirees, the number of employees the company will need to hire is 41380.
   
 Number of individuals available for mentorship role: 1549
+
+one recommendation for further analysis on this data set: It will be good to know if the new employees that the company plans to hire to replace the ones that are retiring will be experienced folks or are they going to hire freshers and promote within the company - for example - staff will be promoted to senior staff and engg will be promoted to senior engg. If this data was available, company could plan the budget and salaries. 
